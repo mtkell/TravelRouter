@@ -1,4 +1,4 @@
-# [TravelRouter] (https://https://github.com/mtkell/TravelRouter/)
+# [TravelRouter] (https://github.com/mtkell/TravelRouter/)
 
 Travel Router using Raspberry Pi, ZeroTier, and Flask-Bulma website for configuration.  
 The design allows connection into any wireless LAN to include hotels, coffee shops and private wireless LANs.
