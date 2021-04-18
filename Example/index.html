@@ -1,0 +1,423 @@
+<html lang="en">
+
+    <head>
+
+            <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+        <title>Network Configuration</title>
+         <meta name="description" content="Open-Source starter coded in Flask and Bulma CSS, enhanced with authentication (login, logout), SQLite.">
+     <link rel="icon" type="image/png" href="static/assets/images/favicon.png" />
+
+    <!--Core CSS -->
+    <link rel="stylesheet" type="text/css" href="static/assets/css/bulma.min.css">
+    <link rel="stylesheet" type="text/css" href="static/assets/css/core.min.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+
+    <!--Libraries-->
+    <link rel="stylesheet" type="text/css" href="static/assets/css/icons.css">
+
+    </head>
+    <body>
+
+<!--         <div id="preloader">
+            <div id="status"></div>
+        </div>     --> 
+        <nav class="navbar is-fresh is-transparent no-shadow" role="navigation" aria-label="main navigation">
+
+            <div class="container">
+                <div class="navbar-brand">
+                    <a class="navbar-item" href="/">
+                        <img src="static/assets/images/logos/bulmaplay-logo.png" 
+                             alt="BulmaPlay Logo, app coded in Flask and Bulma CSS." width="88" height="40">
+                    </a>
+        
+                    <a class="navbar-item is-hidden-desktop is-hidden-tablet">
+                        <div id="menu-icon-wrapper" class="menu-icon-wrapper" style="visibility: visible;">
+                            <svg width="1000px" height="1000px">
+                                <path class="path1" d="M 300 400 L 700 400 C 900 400 900 750 600 850 A 400 400 0 0 1 200 200 L 800 800"></path>
+                                <path class="path2" d="M 300 500 L 700 500"></path>
+                                <path class="path3" d="M 700 600 L 300 600 C 100 600 100 200 400 150 A 400 380 0 1 1 200 800 L 800 200"></path>
+                            </svg>
+                            <button id="menu-icon-trigger" class="menu-icon-trigger"></button>
+                        </div>
+                    </a>
+        
+                    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="cloned-navbar-menu">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </a>
+                </div>
+        
+                <div id="cloned-navbar-menu" class="navbar-menu is-fixed">
+        
+                    <div class="navbar-start">
+                        <a class="navbar-item is-hidden-mobile">
+                            <div id="cloned-menu-icon-wrapper" class="menu-icon-wrapper" style="visibility: visible;">
+                                <svg width="1000px" height="1000px">
+                                    <path class="path1" d="M 300 400 L 700 400 C 900 400 900 750 600 850 A 400 400 0 0 1 200 200 L 800 800"></path>
+                                    <path class="path2" d="M 300 500 L 700 500"></path>
+                                    <path class="path3" d="M 700 600 L 300 600 C 100 600 100 200 400 150 A 400 380 0 1 1 200 800 L 800 200"></path>
+                                </svg>
+                                <button id="cloned-menu-icon-trigger" class="menu-icon-trigger"></button>
+                            </div>
+                        </a>
+                    </div>
+        
+                    <div class="navbar-end">
+                        <a href="#features" class="navbar-item is-secondary">
+                            Features
+                        </a>
+                        <a href="#cta" class="navbar-item is-secondary">
+                            CTA
+                        </a>
+                        <a href="#contact" class="navbar-item is-secondary">
+                            Contact
+                        </a>
+                        <div class="navbar-item has-dropdown is-hoverable">
+                            <a class="navbar-link">
+                                Dropdown
+                            </a>
+        
+                            <div class="navbar-dropdown">
+                                <a class="navbar-item">
+                                    Dropdown item
+                                </a>
+                                <a class="navbar-item">
+                                    Dropdown item
+                                </a>
+                                <a class="navbar-item">
+                                    Dropdown item
+                                </a>
+                            </div>
+                        </div>
+                        <a href="#" class="navbar-item is-secondary modal-trigger" data-modal="modal-auth">
+                            Modal
+                        </a>
+
+                            <a href={{ url_for('logout') }} class="navbar-item">
+                                <span class="button signup-button rounded secondary-btn raised">
+                                    Logout
+                                </span>
+                            </a>
+                   
+
+
+                            <a href={{ url_for('login') }} class="navbar-item">
+                                <span class="button signup-button rounded secondary-btn raised">
+                                    Sign In
+                                </span>
+                            </a>
+
+
+                    </div>
+                </div>
+            </div>
+
+
+        </nav>
+    
+        <nav id="navbar-clone" class="navbar is-fresh is-transparent" role="navigation" aria-label="main navigation">
+
+            <div class="container">
+                <div class="navbar-brand">
+                    <a class="navbar-item" href="/">
+                        <img src="static/assets/images/logos/bulmaplay-logo.png" 
+                             alt="BulmaPlay Logo, app coded in Flask and Bulma CSS." width="88" height="40">
+                    </a>
+        
+                    <a class="navbar-item is-hidden-desktop is-hidden-tablet">
+                        <div id="menu-icon-wrapper" class="menu-icon-wrapper" style="visibility: visible;">
+                            <svg width="1000px" height="1000px">
+                                <path class="path1" d="M 300 400 L 700 400 C 900 400 900 750 600 850 A 400 400 0 0 1 200 200 L 800 800"></path>
+                                <path class="path2" d="M 300 500 L 700 500"></path>
+                                <path class="path3" d="M 700 600 L 300 600 C 100 600 100 200 400 150 A 400 380 0 1 1 200 800 L 800 200"></path>
+                            </svg>
+                            <button id="menu-icon-trigger" class="menu-icon-trigger"></button>
+                        </div>
+                    </a>
+        
+                    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="cloned-navbar-menu">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </a>
+                </div>
+        
+                <div id="cloned-navbar-menu" class="navbar-menu is-fixed">
+        
+                    <div class="navbar-start">
+                        <a class="navbar-item is-hidden-mobile">
+                            <div id="cloned-menu-icon-wrapper" class="menu-icon-wrapper" style="visibility: visible;">
+                                <svg width="1000px" height="1000px">
+                                    <path class="path1" d="M 300 400 L 700 400 C 900 400 900 750 600 850 A 400 400 0 0 1 200 200 L 800 800"></path>
+                                    <path class="path2" d="M 300 500 L 700 500"></path>
+                                    <path class="path3" d="M 700 600 L 300 600 C 100 600 100 200 400 150 A 400 380 0 1 1 200 800 L 800 200"></path>
+                                </svg>
+                                <button id="cloned-menu-icon-trigger" class="menu-icon-trigger"></button>
+                            </div>
+                        </a>
+                    </div>
+        
+                    <div class="navbar-end">
+                        <a href="#features" class="navbar-item is-secondary">
+                            Features
+                        </a>
+                        <a href="#cta" class="navbar-item is-secondary">
+                            CTA
+                        </a>
+                        <a href="#contact" class="navbar-item is-secondary">
+                            Contact
+                        </a>
+                        <div class="navbar-item has-dropdown is-hoverable">
+                            <a class="navbar-link">
+                                Dropdown
+                            </a>
+        
+                            <div class="navbar-dropdown">
+                                <a class="navbar-item">
+                                    Dropdown item
+                                </a>
+                                <a class="navbar-item">
+                                    Dropdown item
+                                </a>
+                                <a class="navbar-item">
+                                    Dropdown item
+                                </a>
+                            </div>
+                        </div>
+                        <a href="#" class="navbar-item is-secondary modal-trigger" data-modal="modal-auth">
+                            Modal
+                        </a>
+                            <a href={{ url_for('logout') }} class="navbar-item">
+                                <span class="button signup-button rounded secondary-btn raised">
+                                    Logout
+                                </span>
+                            </a>
+                        
+                            <a href={{ url_for('login') }} class="navbar-item">
+                                <span class="button signup-button rounded secondary-btn raised">
+                                    Sign In
+                                </span>
+                            </a>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </nav>
+
+<section id="networks" class="section section-feature-grey is-medium">
+            <table class="table is-hoverable is-fullwidth">
+                <thead>
+                    <tr>
+                        <th class="is-narrow">
+                            <input type="checkbox">
+                        </th>
+                        <th>Network SSID</th>
+                        <th>Security Type</th>
+                        <th>Password</th>
+                        <th>Priority</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th class="is-narrow">
+                            <input type="checkbox">
+                        </th>
+                        <th>Network SSID</th>
+                        <th>Security Type</th>
+                        <th>Password</th>
+                        <th>Priority</th>
+                    </tr>
+                </tfoot>
+                <tbody>
+                       <tr>
+                            <td class="is-narrow">
+                                <input type="checkbox">
+                            </td>
+                            <td>KellMesh</td>
+                            <td>PSK2</td>
+                            <td>SamplePass</td>
+                            <td>10</td>
+                        </tr>
+                 </tbody>
+            </table>
+        </section>
+        sudo zerotier-cli set 35c192ce9b439450 allowDefault=1
+
+<footer class="footer footer-dark">
+            <div class="container">
+                <div class="columns">
+                    <div class="column">
+                        <div class="footer-logo">
+                            <img alt="Footer Logo for BulmaPlay - JAMStack Bulma CSS Web App."
+                                 src="static/assets/images/logos/bulmaplay-logo.png">
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="footer-column">
+                            <div class="footer-header">
+                                <h3>App Info</h3>
+                            </div>
+                            <ul class="link-list">
+                                <li><a href="https://github.com/app-generator/flask-bulma-css">Get Code</a></li>
+                                <li><a href="https://appseed.us/apps/bulma-css?flask-bulma-css">Bulma CSS Apps</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="footer-column">
+                            <div class="footer-header">
+                                <h3>Docs</h3>
+                            </div>
+                            <ul class="link-list">
+                                <li><a href="https://blog.appseed.us/bulmaplay-built-with-flask-and-bulma-css/">Read more</a></li>
+                                <li><a href="https://blog.appseed.us/tag/bulma-css">Bulma CSS</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="footer-column">
+                            <div class="footer-header">
+                                <h3>Credits</h3>
+                            </div>
+                            <ul class="link-list">
+                                <li><a href="https://absurd.design/">Absurd Design</a></li>
+                                <li><a href="https://github.com/cssninjaStudio/fresh">CSS Ninja</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="footer-column">
+                            <div class="footer-header">
+                                <h3>Social Links</h3>
+                                <nav class="level is-mobile">
+                                    <div class="level-left">
+                                        <a class="level-item" href="https://github.com/app-generator">
+                                            <span class="icon"><i class="fa fa-github"></i></span>
+                                        </a>
+                                        <a class="level-item" href="https://facebook.com/webappseed">
+                                            <span class="icon"><i class="fa fa-facebook"></i></span>
+                                        </a>
+                                        <a class="level-item" href="https://twitter.com/webappseed">
+                                            <span class="icon"><i class="fa fa-twitter"></i></span>
+                                        </a>
+                                        <a class="level-item" href="https://instagram.com/webappseed">
+                                            <span class="icon"><i class="fa fa-instagram"></i></span>
+                                        </a>
+                                    </div>
+                                </nav>
+        
+                                <a href="https://bulma.io" target="_blank">
+                                    <img src="static/assets/images/logos/made-with-bulma.png" alt="Made with Bulma" width="128" height="24">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Back To Top Button -->
+        <div id="backtotop">
+            <a href="#"></a>
+        </div>        
+
+<div id="modal-auth" class="modal">
+            <div class="modal-background"></div>
+            <div class="modal-content">
+                <div class="flex-card auth-card">
+                    <div class="tabs-wrapper">
+                        <div class="tabs">
+                            <ul>
+                                <li class="is-active" data-tab="login-tab"><a>Login</a></li>
+                                <li data-tab="register-tab"><a>Register</a></li>
+                            </ul>
+                        </div>
+                        <div id="login-tab" class="tab-content is-active">
+                            <div class="field">
+                                <label>Username</label>
+                                <div class="control">
+                                    <input type="text" class="input is-medium" placeholder="Enter username">
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label>Password</label>
+                                <div class="control">
+                                    <input type="password" class="input is-medium" placeholder="Enter password">
+                                </div>
+                            </div>
+        
+                            <a class="button is-fullwidth secondary-btn is-rounded raised">Log in</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="modal-close is-large" aria-label="close"></button>
+        </div>
+      
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <img src="/static/assets/images/logos/fresh-square.svg">
+                <a class="sidebar-close" href="javascript:void(0);"><i data-feather="x"></i></a>
+            </div>
+            <div class="inner">
+                <ul class="sidebar-menu">
+                    <li><span class="nav-section-title"></span></li>
+                    <li class="have-children"><a href="#"><span class="fa fa-info-circle"></span>About</a>
+                        <ul>
+                            <li><a target="_blank" href="https://github.com/app-generator/flask-bulma-css">Sources</a></li>
+                            <li><a target="_blank" href="https://blog.appseed.us/bulmaplay-built-with-flask-and-bulma-css/">Blog Article</a></li>
+                        </ul>
+                    </li>
+                    <li class="have-children"><a href="#"><span class="fa fa-cog"></span>Support</a>
+                        <ul>
+                            <li><a target="_blank" href="https://discord.gg/fZC6hup">Discord</a></li>
+                            <li><a target="_blank" href="https://appseed.us/support">AppSeed</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>        
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <img src="/static/assets/images/logos/fresh-square.svg">
+                <a class="sidebar-close" href="javascript:void(0);"><i data-feather="x"></i></a>
+            </div>
+            <div class="inner">
+                <ul class="sidebar-menu">
+                    <li><span class="nav-section-title"></span></li>
+                    <li class="have-children"><a href="#"><span class="fa fa-info-circle"></span>About</a>
+                        <ul>
+                            <li><a target="_blank" href="https://github.com/app-generator/flask-bulma-css">Sources</a></li>
+                            <li><a target="_blank" href="https://blog.appseed.us/bulmaplay-built-with-flask-and-bulma-css/">Blog Article</a></li>
+                        </ul>
+                    </li>
+                    <li class="have-children"><a href="#"><span class="fa fa-cog"></span>Support</a>
+                        <ul>
+                            <li><a target="_blank" href="https://discord.gg/fZC6hup">Discord</a></li>
+                            <li><a target="_blank" href="https://appseed.us/support">AppSeed</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>        
+    </body>
+
+</html>
+
+
+
+
+
+
+

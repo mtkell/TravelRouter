@@ -134,6 +134,10 @@ def index(path):
     except:
         abort(404)
 
+@app.route('/config')
+def config():
+   network = {ssid:'KellMesh', security: 'PSK2', password: 'secret', priority: '10'}
+   return render_template('')
 #@app.route('/favicon.ico')
 #def favicon():
 #    return send_from_directory(os.path.join(app.root_path, 'static'),

@@ -1,0 +1,41 @@
+
+        networks = {{ networks }}
+        {% if networks %}
+        <section id="networks" class="section section-feature-grey is-medium">
+            <table class="table is-hoverable is-fullwidth">
+                <thead>
+                    <tr>
+                        <th class="is-narrow">
+                            <input type="checkbox">
+                        </th>
+                        <th>Network SSID</th>
+                        <th>Security Type</th>
+                        <th>Password</th>
+                        <th>Priority</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th class="is-narrow">
+                            <input type="checkbox">
+                        </th>
+                        <th>Network SSID</th>
+                        <th>Security Type</th>
+                        <th>Password</th>
+                        <th>Priority</th>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    
+                    {% for item in networks %}
+                        <tr>
+                            <td>{{ item.ssid }}</td>
+                            <td>{{ item.security }}</td>
+                            <td>{{ item.password }}</td>
+                            <td>{{ item.priority }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </section>
+        {% endif %}
